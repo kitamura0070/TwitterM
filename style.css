@@ -1,0 +1,177 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-size: 15px;
+  font-family: "Segoe UI", Meiryo, system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+  vertical-align: bottom;
+}
+
+body {
+  background-color: greenyellow;
+  margin: 10;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  font-size: 2rem;
+  min-height: 100vh;
+}
+
+header {
+  z-index: 1;
+  font-size: 15px;
+  height: 3.6rem;
+  min-width: 100%;
+  position: fixed;
+  background-color: blue;
+}
+
+header input {
+  width: 35rem;
+  height: 2.2rem;
+  border-radius: 20px;
+}
+
+header a {
+  border: solid 1px #fff;
+  border-radius: 20px;
+  font-size: 15px;
+  font-weight: bold;
+}
+
+header ul {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  list-style-type: none;
+  margin: 0 auto;
+  margin-top: 0.6rem;
+}
+
+header li:nth-child(1) {
+  margin-left: 20%;
+  margin-right: 2rem;
+}
+
+header li:nth-child(3) {
+  margin-left: auto;
+}
+
+header li:nth-child(4) {
+  margin-left: 2rem;
+  margin-right: 20px;
+}
+
+main {
+  padding-top: 3.6rem;
+  background-color: green;
+  width: 600px;
+  margin: 0 auto;
+}
+
+main .head {
+  position: relative;
+  height: 200px;
+  width: 600px;
+}
+
+main .Icon {
+  height: 15px;
+}
+
+main .icon {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  width: 134px;
+  height: 134px;
+  border-radius: 50%;
+  border: 3px solid #fff;
+  position: relative;
+  top: -70px;
+  left: 20px;
+}
+
+main section .follow {
+  margin-left: 480px;
+  text-align: center;
+  border: 2px solid #1da1f2;
+  border-radius: 610px;
+  width: 92px;
+  height: 39px;
+}
+
+main section .Prof {
+  margin-top: 5px;
+  padding-left: 15px;
+}
+
+main section .Prof .Name {
+  margin-top: 15px;
+  font-weight: bold;
+  font-size: 17px;
+}
+
+main section .Prof .Comment {
+  width: 568px;
+  padding-top: 1rem;
+  line-height: 19.6875px;
+}
+
+main section .Prof .followNumber {
+  padding-top: 10px;
+}
+
+main section .Prof span {
+  font-weight: bold;
+  padding-right: 10px;
+}
+
+main nav p a {
+  display: inline-block;
+  width: 25%;
+  text-align: center;
+  padding: 15px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+}
+
+article a img {
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+}
+
+article .tweet {
+  padding-left: 70px;
+}
+
+article .shere p {
+  display: inline-block;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  width: 23%;
+}
+
+aside {
+  padding-top: 3.3rem;
+  background-color: aqua;
+  width: 25%;
+  min-width: 250px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.rep {
+  height: 20px;
+  width: 20px;
+}
+/*# sourceMappingURL=style.css.map */
