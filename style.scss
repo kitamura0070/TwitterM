@@ -1,5 +1,3 @@
-//ツイッターのカラー
-$MainColor: rgb(29, 161, 242);
 * {
   margin: 0;
   padding: 0;
@@ -7,7 +5,10 @@ $MainColor: rgb(29, 161, 242);
   font-family: "Segoe UI", Meiryo, system-ui, -apple-system, BlinkMacSystemFont,
     sans-serif;
   vertical-align: bottom;
+  overflow-wrap: break-word;
 }
+//ツイッターのカラー
+$MainColor: rgb(29, 161, 242);
 // ログイン・フォロー・アカウント作成の長丸の縁
 .Oval {
   border: solid 1px #fff;
@@ -45,6 +46,10 @@ $MainColor: rgb(29, 161, 242);
   height: 200px;
   width: 600px;
 }
+//検索バー横のアイコン
+.HeaderIcon {
+  width: 20px;
+}
 //検索バーアイコン
 .SearchIcon {
   height: 15px;
@@ -53,11 +58,16 @@ $MainColor: rgb(29, 161, 242);
   left: 30px;
   top: -15px;
 }
+//検索バー
+.SearchBar {
+  width: 300px;
+  height: 2.2rem;
+  border-radius: 20px;
+}
 //ハンバーガーアイコン
 .hamburg {
   width: 23px;
   height: 23px;
-  margin-right: 40px;
 }
 //フォロー
 .Follow {
@@ -82,141 +92,169 @@ $MainColor: rgb(29, 161, 242);
 }
 //ツイート メディア いいねの欄
 .TweetNav {
-  color: #657786;
+  color: black;
   font-size: 15px;
   text-align: center;
   font-weight: 700;
   box-sizing: border-box;
+  display: inline-block;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.2);
 }
 .FontSize15 {
   font-size: 15px;
 }
-//ツイート内容の幅
-.TweetWidth {
-  margin: 30px 15px 0;
-}
+
 //asideの縁
-.Aside {
+.AsideEdge {
   box-sizing: border-box;
-  border: 1px solid #14171a;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  border-radius: 12px;
   margin: 10px 0 15px;
+}
+//Twitterを使ってみよう
+.useTwitter {
+  border: 1px solid #14171a;
+  margin: 20px;
 }
 
 //aside画像(中心)
 .AsideCenter {
 }
 //aside画像(左上)
+.AsideUpperLeft {
+  border-top-left-radius: 8px;
+}
 //aside画像(右上)
+.AsideUpperRight {
+  border-top-right-radius: 8px;
+}
 //aside画像(右下)
+.AsideLowerRight {
+  border-bottom-right-radius: 8px;
+}
 //aside画像(左下)
+.AsideLowerLeft {
+  border-bottom-left-radius: 8px;
+}
 ///////////////////////////////////////////////////////
 body {
   background-color: greenyellow;
   display: flex;
   min-height: 100vh;
-}
-header {
-  background-color: blue;
-  z-index: 1;
-  height: 3.6rem;
   min-width: 100%;
-  position: fixed;
+  header {
+    min-width: 100%;
+    height: 3.6rem;
+    background-color: blue;
+    z-index: 1;
+    position: fixed;
+    ul {
+      display: flex;
+      height: 3.6rem;
+      background-color: white;
+      list-style-type: none;
+      li {
+        height: 3.6rem;
+        display: inline-block;
+      }
+      .HeaderLeft {
+        background-color: blue;
+        width: 600px;
+        margin: 0 10px 0 auto;
+      }
+      .HeaderRight {
+        background-color: red;
+        width: 300px;
+        margin: 0 auto 0 10px;
+      }
+    }
+  }
 
-  ul {
-    align-items: center;
-    display: flex;
-    list-style-type: none;
-    margin: 0 auto;
-    margin-top: 0.6rem;
-  }
-  li:nth-of-type(1) {
-    margin-left: 15%;
-    margin-right: 2rem;
-  }
-  li:nth-of-type(2) {
-    height: 0;
-  }
-  input {
-    width: 486px;
-    height: 2.2rem;
-    border-radius: 20px;
-  }
-  li:nth-of-type(4) {
-    margin-left: auto;
-  }
-  li:nth-of-type(5) {
-    margin-left: 2rem;
-    margin-right: 20px;
-  }
-}
+  main {
+    padding-top: 3.6rem;
+    background-color: green;
+    width: 600px;
+    margin: 0 10px 0 auto;
 
-main {
-  padding-top: 3.6rem;
-  background-color: green;
-  width: 600px;
-  margin: 0 auto;
-
-  section {
-    .Height0 {
-      height: 0px;
+    section {
+      .Height0 {
+        height: 0px;
+      }
+      .Prof {
+        margin-left: 15px;
+      }
+      .Comment {
+        padding-top: 8px;
+        padding-bottom: 8px;
+      }
+      span {
+        font-size: 15px;
+      }
     }
-    .Prof {
-      margin-left: 15px;
-    }
-    .Comment {
-      padding-top: 8px;
-      padding-bottom: 8px;
-    }
-    span {
-      font-size: 15px;
+    nav {
+      p {
+        a {
+          width: 25%;
+          padding: 15px;
+        }
+      }
     }
   }
-}
-nav {
-  p {
-    a {
-      display: inline-block;
+
+  article {
+    .TweetIcon {
+      margin-right: 10px;
+    }
+    .TweetWidth {
+      margin: 30px 15px 0;
+    }
+    .Flex {
+      display: flex;
+    }
+    .Columm {
+      flex-direction: column;
+    }
+    .Share {
       width: 25%;
-      padding: 15px;
-      border-bottom: 1px solid rgba(0, 0, 0, 0.2);
     }
   }
-}
 
-article {
-  .TweetIcon {
-    margin-right: 10px;
+  aside {
+    margin: 0 auto 0 10px;
+    padding-top: 3.3rem;
+    background-color: aqua;
+    width: 350px;
+
+    .Pad {
+      padding: 10px 15px;
+    }
+    .AsideImg {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: center;
+      width: 350px;
+      height: 198px;
+      border-color: #fff;
+
+      img {
+        width: 114px;
+        height: 97px;
+      }
+    }
   }
-  .Flex {
+  footer {
     display: flex;
-  }
-  .Columm {
-    flex-direction: column;
-  }
-  .Share {
-    width: 25%;
-  }
-}
-//////////////////
-aside {
-  padding-top: 3.3rem;
-  background-color: aqua;
-  width: 350px;
-  min-width: 250px;
-  display: flex;
-  flex-direction: column;
-
-  .useTwitter {
-    border: 1px solid #14171a;
-    margin: 20px;
-    p:nth-of-type(2) {
-      text-align: center;
+    flex-wrap: wrap;
+    color: rgb(101, 119, 134);
+    margin-top: 40px;
+    p {
+      display: inline-block;
+      box-sizing: border-box;
+      margin: 2px 0;
     }
     a {
-      text-align: center;
-      height: 37px;
-      width: 297px;
-      background-color: green;
+      padding-right: 10px;
     }
   }
 }
