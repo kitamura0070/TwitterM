@@ -1,3 +1,5 @@
+//ツイッターのカラー
+$MainColor: rgb(29, 161, 242);
 * {
   margin: 0;
   padding: 0;
@@ -6,32 +8,119 @@
     sans-serif;
   vertical-align: bottom;
 }
+// ログイン・フォロー・アカウント作成の長丸の縁
+.Oval {
+  border: solid 1px #fff;
+  border-radius: 20px;
+  font-weight: bold;
+  padding: 2px 15px;
+  box-sizing: border-box;
+  text-align: center;
+}
+//アイコンの丸
+.Circle {
+  box-sizing: border-box;
+  border-radius: 50%;
+}
+//ミニサイズアイコン
+.Mini {
+  width: 49px;
+  height: 49px;
+}
+//ビックアイコン
+.Big {
+  height: 134px;
+  width: 134px;
+  position: relative;
+  top: -70px;
+  left: 20px;
+}
+//Asideのビックアイコン
+.BigOval {
+  text-align: center;
+}
+//ヘッダーアイコン
+.Head {
+  position: relative;
+  height: 200px;
+  width: 600px;
+}
+//検索バーアイコン
+.SearchIcon {
+  height: 15px;
+  width: 15px;
+  position: absolute;
+  left: 30px;
+  top: -15px;
+}
+//ハンバーガーアイコン
+.hamburg {
+  width: 23px;
+  height: 23px;
+  margin-right: 40px;
+}
+//フォロー
+.Follow {
+  display: inline-block;
+  margin-top: 15px;
+  margin-left: 470px;
+  margin-bottom: 25px;
+  border: 2px solid $MainColor;
+  padding: 8px 15px;
+}
+//H1的な部分
+.Bold {
+  font-weight: bold;
+  color: #14171a;
+  font-size: 19px;
+}
+//リプライfavなどのアイコンの大きさ
+.icon {
+  box-sizing: border-box;
+  height: 19px;
+  width: 19px;
+}
+//ツイート メディア いいねの欄
+.TweetNav {
+  color: #657786;
+  font-size: 15px;
+  text-align: center;
+  font-weight: 700;
+  box-sizing: border-box;
+}
+.FontSize15 {
+  font-size: 15px;
+}
+//ツイート内容の幅
+.TweetWidth {
+  margin: 30px 15px 0;
+}
+//asideの縁
+.Aside {
+  box-sizing: border-box;
+  border: 1px solid #14171a;
+  margin: 10px 0 15px;
+}
 
+//aside画像(中心)
+.AsideCenter {
+}
+//aside画像(左上)
+//aside画像(右上)
+//aside画像(右下)
+//aside画像(左下)
+///////////////////////////////////////////////////////
 body {
   background-color: greenyellow;
-  margin: 10;
   display: flex;
-  font-size: 2rem;
   min-height: 100vh;
 }
 header {
+  background-color: blue;
   z-index: 1;
-  font-size: 15px;
   height: 3.6rem;
   min-width: 100%;
   position: fixed;
-  background-color: blue;
-  input {
-    width: 35rem;
-    height: 2.2rem;
-    border-radius: 20px;
-  }
-  a {
-    border: solid 1px #fff;
-    border-radius: 20px;
-    font-size: 15px;
-    font-weight: bold;
-  }
 
   ul {
     align-items: center;
@@ -40,15 +129,22 @@ header {
     margin: 0 auto;
     margin-top: 0.6rem;
   }
-  li:nth-child(1) {
-    margin-left: 20%;
+  li:nth-of-type(1) {
+    margin-left: 15%;
     margin-right: 2rem;
   }
-
-  li:nth-child(3) {
+  li:nth-of-type(2) {
+    height: 0;
+  }
+  input {
+    width: 486px;
+    height: 2.2rem;
+    border-radius: 20px;
+  }
+  li:nth-of-type(4) {
     margin-left: auto;
   }
-  li:nth-child(4) {
+  li:nth-of-type(5) {
     margin-left: 2rem;
     margin-right: 20px;
   }
@@ -59,95 +155,68 @@ main {
   background-color: green;
   width: 600px;
   margin: 0 auto;
-  .head {
-    position: relative;
-    height: 200px;
-    width: 600px;
-  }
-  .Icon {
-    height: 15px;
-  }
-  .icon {
-    box-sizing: border-box;
-    width: 134px;
-    height: 134px;
-    border-radius: 50%;
-    border: 3px solid #fff;
-    position: relative;
-    top: -70px;
-    left: 20px;
-  }
+
   section {
-    .follow {
-      margin-left: 480px;
-      text-align: center;
-      border: 2px solid rgb(29, 161, 242);
-      border-radius: 610px;
-      width: 92px;
-      height: 39px;
+    .Height0 {
+      height: 0px;
     }
     .Prof {
-      margin-top: 5px;
-      padding-left: 15px;
-      .Name {
-        margin-top: 15px;
-        font-weight: bold;
-        font-size: 17px;
-      }
-      .Comment {
-        width: 568px;
-        padding-top: 1rem;
-        line-height: 19.6875px;
-      }
-      .followNumber {
-        padding-top: 10px;
-      }
-      span {
-        font-weight: bold;
-        padding-right: 10px;
-      }
+      margin-left: 15px;
     }
-  }
-  nav {
-    p {
-      a {
-        display: inline-block;
-        width: 25%;
-        text-align: center;
-        padding: 15px;
-        box-sizing: border-box;
-        border-bottom: 1px solid rgba(0, 0, 0, 0.2);
-      }
+    .Comment {
+      padding-top: 8px;
+      padding-bottom: 8px;
+    }
+    span {
+      font-size: 15px;
     }
   }
 }
-article {
-  a img {
-    position: absolute;
-    width: 50px;
-    height: 50px;
-    border-radius: 50%;
-  }
-  .tweet {
-    padding-left: 70px;
-  }
-  .shere p {
-    display: inline-block;
-    box-sizing: border-box;
-    width: 23%;
+nav {
+  p {
+    a {
+      display: inline-block;
+      width: 25%;
+      padding: 15px;
+      border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+    }
   }
 }
 
+article {
+  .TweetIcon {
+    margin-right: 10px;
+  }
+  .Flex {
+    display: flex;
+  }
+  .Columm {
+    flex-direction: column;
+  }
+  .Share {
+    width: 25%;
+  }
+}
+//////////////////
 aside {
   padding-top: 3.3rem;
   background-color: aqua;
-  width: 25%;
+  width: 350px;
   min-width: 250px;
   display: flex;
   flex-direction: column;
-}
 
-.rep {
-  height: 20px;
-  width: 20px;
+  .useTwitter {
+    border: 1px solid #14171a;
+    margin: 20px;
+    p:nth-of-type(2) {
+      text-align: center;
+    }
+    a {
+      text-align: center;
+      height: 37px;
+      width: 297px;
+      background-color: green;
+    }
+  }
 }
