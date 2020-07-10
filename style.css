@@ -285,4 +285,8 @@ body footer p {
 body footer a {
   padding-right: 10px;
 }
+
+body .Hidden {
+  display: none;
+}
 /*# sourceMappingURL=style.css.map */
