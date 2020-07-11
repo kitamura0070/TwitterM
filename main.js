@@ -5,12 +5,12 @@
   const ClickedFollowing = document.getElementById("ClickedFollowing");
   const Modal = document.getElementById("Modal");
   const Mask = document.querySelector("Mask");
-  const Visible = document.querySelector("Visible");
+  const ScrollLock = document.documentElement;
 
   ClickedFollowing.addEventListener("click", () => {
-    Modal.classList.add("Hidden");
+    Modal.classList.remove("Hidden");
+    ScrollLock.classList.add("ScrollLock");
   });
-  // document.addEventListener("DOMContentLoaded", DA, false);
 
   /*
   //プロフィール読み込み

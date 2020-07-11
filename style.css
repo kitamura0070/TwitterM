@@ -5,9 +5,10 @@
   font-family: "Segoe UI", Meiryo, system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
   vertical-align: bottom;
   overflow-wrap: break-word;
+  list-style-type: none;
 }
 
-.Oval {
+* .Oval {
   border: solid 1px #fff;
   border-radius: 20px;
   font-weight: bold;
@@ -17,122 +18,48 @@
   text-align: center;
 }
 
-.Circle {
+* .Circle {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   border-radius: 50%;
 }
 
-.Mini {
-  width: 49px;
-  height: 49px;
+* .Mini {
+  width: 3rem;
+  height: 3rem;
 }
 
-.Big {
-  height: 134px;
-  width: 134px;
-  position: relative;
-  top: -70px;
-  left: 20px;
+* .FontSize15 {
+  font-size: 15px;
 }
 
-.BigOval {
-  text-align: center;
-}
-
-.Head {
-  position: relative;
-  height: 200px;
-  width: 600px;
-}
-
-.HeaderIcon {
-  width: 20px;
-}
-
-.SearchIcon {
-  height: 15px;
-  width: 15px;
-  position: absolute;
-  left: 30px;
-  top: -15px;
-}
-
-.SearchBar {
-  width: 300px;
-  height: 2.2rem;
-  border-radius: 20px;
-}
-
-.hamburg {
-  width: 23px;
-  height: 23px;
-}
-
-.Follow {
+* .InlineBlock {
   display: inline-block;
-  margin-top: 15px;
-  margin-left: 470px;
-  margin-bottom: 25px;
-  border: 2px solid #1da1f2;
-  padding: 8px 15px;
 }
 
-.Bold {
+* .Bold {
   font-weight: bold;
   color: #14171a;
   font-size: 19px;
 }
 
-.icon {
+* .icon {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-  height: 19px;
-  width: 19px;
+  height: 1.4rem;
+  width: 1.4rem;
 }
 
-.TweetNav {
-  color: black;
-  font-size: 15px;
-  text-align: center;
-  font-weight: 700;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-  display: inline-block;
-  border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+.MainColor {
+  color: #1da1f2;
 }
 
-.FontSize15 {
-  font-size: 15px;
+.SubTextColor {
+  color: #657786;
 }
 
-.AsideEdge {
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-  border: 1px solid rgba(0, 0, 0, 0.2);
-  border-radius: 12px;
-  margin: 10px 0 15px;
-}
-
-.useTwitter {
-  border: 1px solid #14171a;
-  margin: 20px;
-}
-
-.AsideUpperLeft {
-  border-top-left-radius: 8px;
-}
-
-.AsideUpperRight {
-  border-top-right-radius: 8px;
-}
-
-.AsideLowerRight {
-  border-bottom-right-radius: 8px;
-}
-
-.AsideLowerLeft {
-  border-bottom-left-radius: 8px;
+.WhiteColor {
+  color: white;
 }
 
 body {
@@ -144,7 +71,7 @@ body {
   min-width: 100%;
 }
 
-body header {
+header {
   min-width: 100%;
   height: 3.6rem;
   background-color: blue;
@@ -152,98 +79,182 @@ body header {
   position: fixed;
 }
 
-body header ul {
+main {
+  padding-top: 3.6rem;
+  background-color: green;
+  width: 55%;
+  margin: 0 10px 0 auto;
+}
+
+aside {
+  margin: 0 auto 0 10px;
+  padding-top: 3.3rem;
+  background-color: aqua;
+  width: 35%;
+}
+
+footer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  margin-top: 40px;
+}
+
+header .LeftUl {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   height: 3.6rem;
-  background-color: white;
-  list-style-type: none;
+  width: 100%;
+  background-color: skyblue;
+  padding-top: 0.5rem;
 }
 
-body header ul li {
-  height: 3.6rem;
+header .HeaderLeft {
   display: inline-block;
+  width: 60%;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
 
-body header ul .HeaderLeft {
-  background-color: blue;
-  width: 600px;
-  margin: 0 10px 0 auto;
+header .HeaderIcon {
+  width: 1.5rem;
 }
 
-body header ul .HeaderRight {
+header .SearchIcon {
+  height: 1rem;
+  width: 1rem;
+  position: absolute;
+  left: 30px;
+  top: -15px;
+}
+
+header .SearchBar {
+  width: 20rem;
+  height: 2.2rem;
+  border-radius: 20px;
+}
+
+header .RightUl {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 3.6rem;
+  width: 100%;
   background-color: red;
-  width: 300px;
-  margin: 0 auto 0 10px;
+  padding-top: 1rem;
 }
 
-body main {
-  padding-top: 3.6rem;
-  background-color: green;
-  width: 600px;
-  margin: 0 10px 0 auto;
+header .HeaderRight {
+  display: inline-block;
+  width: 39%;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
 
-body main section .Height0 {
-  height: 0px;
+header .Hamburg {
+  width: 1.5rem;
+  height: 1.5rem;
 }
 
-body main section .Prof {
+main section .HeadImg {
+  position: relative;
+  height: 12.5rem;
+  width: 100%;
+}
+
+main section .Big {
+  height: 8rem;
+  width: 8rem;
+  margin-top: -4rem;
+  margin-left: 1rem;
+  z-index: 1;
+  position: relative;
+  float: left;
+}
+
+main section .Follow {
+  display: block;
+  float: right;
+  border: 2px solid;
+  padding: 8px 15px;
+  margin-top: 1rem;
+  margin-right: 3rem;
+}
+
+main section .Prof {
+  float: clear;
   margin-left: 15px;
+  margin-top: 5rem;
 }
 
-body main section .Comment {
+main section .Comment {
   padding-top: 8px;
   padding-bottom: 8px;
 }
 
-body main section span {
+main nav .TweetNav {
   font-size: 15px;
-}
-
-body main nav p a {
+  text-align: center;
+  font-weight: 700;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  display: inline-block;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.2);
   width: 25%;
   padding: 15px;
 }
 
-body article .TweetIcon {
+main article .TweetIcon {
   margin-right: 10px;
 }
 
-body article .TweetWidth {
+main article .Tweet {
   margin: 30px 15px 0;
-}
-
-body article .Flex {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
 }
 
-body article .Columm {
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+main article .Flex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
 }
 
-body article .Share {
+main article .Share {
   width: 25%;
 }
 
-body aside {
-  margin: 0 auto 0 10px;
-  padding-top: 3.3rem;
-  background-color: aqua;
-  width: 350px;
+aside .AsideEdge {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  border-radius: 12px;
+  margin: 10px 0 15px;
 }
 
-body aside .Pad {
+aside .Pad {
   padding: 10px 15px;
 }
 
-body aside .AsideImg {
+aside .BigOval {
+  text-align: center;
+}
+
+aside .Width30 {
+  width: 33%;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+aside .AsideImg {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -255,38 +266,85 @@ body aside .AsideImg {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  width: 350px;
-  height: 198px;
+  width: 100%;
   border-color: #fff;
 }
 
-body aside .AsideImg img {
-  width: 114px;
-  height: 97px;
+aside .AsideUpperCenter {
+  width: 100%;
+  height: 100%;
+  padding-bottom: 2px;
 }
 
-body footer {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  color: #657786;
-  margin-top: 40px;
+aside .AsideLowerCenter {
+  width: 100%;
+  height: 100%;
 }
 
-body footer p {
-  display: inline-block;
+aside .AsideUpperLeft {
+  border-top-left-radius: 8px;
+  width: 100%;
+  height: 100%;
+  padding-bottom: 2px;
+}
+
+aside .AsideUpperRight {
+  border-top-right-radius: 8px;
+  width: 100%;
+  height: 100%;
+  padding-bottom: 2px;
+}
+
+aside .AsideLowerRight {
+  border-bottom-right-radius: 8px;
+  width: 100%;
+  height: 100%;
+}
+
+aside .AsideLowerLeft {
+  border-bottom-left-radius: 8px;
+  width: 100%;
+  height: 100%;
+}
+
+footer .FooterText {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-  margin: 2px 0;
-}
-
-body footer a {
   padding-right: 10px;
+  margin: 2px 0;
+  font-size: 13px;
 }
 
-body .Hidden {
+.ModalAll .Hidden {
   display: none;
+}
+
+.ModalAll .Modal {
+  background: #fff;
+  width: 600px;
+  height: 500px;
+  border-radius: 4px;
+  position: fixed;
+  top: 100px;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  z-index: 1;
+}
+
+.ModalAll .Close {
+  height: 22px;
+}
+
+.ModalAll .ModalIcon {
+  height: 49px;
+  width: 49px;
+  padding: 0 0 0 50px;
+}
+
+.ModalAll .ScrollLock {
+  overflow: hidden;
+  -ms-touch-action: none;
+      touch-action: none;
 }
 /*# sourceMappingURL=style.css.map */

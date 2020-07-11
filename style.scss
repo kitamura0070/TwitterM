@@ -6,260 +6,354 @@
     sans-serif;
   vertical-align: bottom;
   overflow-wrap: break-word;
+  list-style-type: none;
+
+  //共通要素
+
+  // ログイン・フォロー・アカウント作成の長丸の縁
+  .Oval {
+    border: solid 1px #fff;
+    border-radius: 20px;
+    font-weight: bold;
+    padding: 2px 15px;
+    box-sizing: border-box;
+    text-align: center;
+  }
+  //丸のアイコン
+  .Circle {
+    box-sizing: border-box;
+    border-radius: 50%;
+  }
+  //ミニサイズアイコン
+  .Mini {
+    width: 3rem;
+    height: 3rem;
+  }
+  //フォントサイズ15
+  .FontSize15 {
+    font-size: 15px;
+  }
+  //インラインブロック
+  .InlineBlock {
+    display: inline-block;
+  }
+  //H1的な部分
+  .Bold {
+    font-weight: bold;
+    color: #14171a;
+    font-size: 19px;
+  }
+  //リプライfavなどのアイコンの大きさ
+  .icon {
+    box-sizing: border-box;
+    height: 1.4rem;
+    width: 1.4rem;
+  }
 }
-//ツイッターのカラー
-$MainColor: rgb(29, 161, 242);
-// ログイン・フォロー・アカウント作成の長丸の縁
-.Oval {
-  border: solid 1px #fff;
-  border-radius: 20px;
-  font-weight: bold;
-  padding: 2px 15px;
-  box-sizing: border-box;
-  text-align: center;
+//カラー
+.MainColor {
+  color: rgb(29, 161, 242);
 }
-//アイコンの丸
-.Circle {
-  box-sizing: border-box;
-  border-radius: 50%;
+.SubTextColor {
+  color: #657786;
 }
-//ミニサイズアイコン
-.Mini {
-  width: 49px;
-  height: 49px;
-}
-//ビックアイコン
-.Big {
-  height: 134px;
-  width: 134px;
-  position: relative;
-  top: -70px;
-  left: 20px;
-}
-//Asideのビックアイコン
-.BigOval {
-  text-align: center;
-}
-//ヘッダーアイコン
-.Head {
-  position: relative;
-  height: 200px;
-  width: 600px;
-}
-//検索バー横のアイコン
-.HeaderIcon {
-  width: 20px;
-}
-//検索バーアイコン
-.SearchIcon {
-  height: 15px;
-  width: 15px;
-  position: absolute;
-  left: 30px;
-  top: -15px;
-}
-//検索バー
-.SearchBar {
-  width: 300px;
-  height: 2.2rem;
-  border-radius: 20px;
-}
-//ハンバーガーアイコン
-.hamburg {
-  width: 23px;
-  height: 23px;
-}
-//フォロー
-.Follow {
-  display: inline-block;
-  margin-top: 15px;
-  margin-left: 470px;
-  margin-bottom: 25px;
-  border: 2px solid $MainColor;
-  padding: 8px 15px;
-}
-//H1的な部分
-.Bold {
-  font-weight: bold;
-  color: #14171a;
-  font-size: 19px;
-}
-//リプライfavなどのアイコンの大きさ
-.icon {
-  box-sizing: border-box;
-  height: 19px;
-  width: 19px;
-}
-//ツイート メディア いいねの欄
-.TweetNav {
-  color: black;
-  font-size: 15px;
-  text-align: center;
-  font-weight: 700;
-  box-sizing: border-box;
-  display: inline-block;
-  border-bottom: 1px solid rgba(0, 0, 0, 0.2);
-}
-.FontSize15 {
-  font-size: 15px;
+.WhiteColor {
+  color: white;
 }
 
-//asideの縁
-.AsideEdge {
-  box-sizing: border-box;
-  border: 1px solid rgba(0, 0, 0, 0.2);
-  border-radius: 12px;
-  margin: 10px 0 15px;
-}
-//Twitterを使ってみよう
-.useTwitter {
-  border: 1px solid #14171a;
-  margin: 20px;
-}
+////////////////////////////////////////////////////////////////////////////////////////
 
-//aside画像(中心)
-.AsideCenter {
-}
-//aside画像(左上)
-.AsideUpperLeft {
-  border-top-left-radius: 8px;
-}
-//aside画像(右上)
-.AsideUpperRight {
-  border-top-right-radius: 8px;
-}
-//aside画像(右下)
-.AsideLowerRight {
-  border-bottom-right-radius: 8px;
-}
-//aside画像(左下)
-.AsideLowerLeft {
-  border-bottom-left-radius: 8px;
-}
-///////////////////////////////////////////////////////
+//ボディ
 body {
   background-color: greenyellow;
   display: flex;
   min-height: 100vh;
   min-width: 100%;
-  header {
-    min-width: 100%;
+}
+//ヘッダー
+header {
+  min-width: 100%;
+  height: 3.6rem;
+  background-color: blue;
+  z-index: 1;
+  position: fixed;
+}
+//メイン
+main {
+  padding-top: 3.6rem;
+  background-color: green;
+  width: 55%;
+  margin: 0 10px 0 auto;
+}
+//アサイド
+aside {
+  margin: 0 auto 0 10px;
+  padding-top: 3.3rem;
+  background-color: aqua;
+  width: 35%;
+}
+//フッター
+footer {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 40px;
+}
+
+////////////////////////////////////////////////////////////////////////////////////////////
+//ヘッダーの中
+header {
+  /////////////////////////左半分/////////////////////////
+  .LeftUl {
+    box-sizing: border-box;
+    display: flex;
     height: 3.6rem;
-    background-color: blue;
-    z-index: 1;
-    position: fixed;
-    ul {
-      display: flex;
-      height: 3.6rem;
-      background-color: white;
-      list-style-type: none;
-      li {
-        height: 3.6rem;
-        display: inline-block;
-      }
-      .HeaderLeft {
-        background-color: blue;
-        width: 600px;
-        margin: 0 10px 0 auto;
-      }
-      .HeaderRight {
-        background-color: red;
-        width: 300px;
-        margin: 0 auto 0 10px;
-      }
+    width: 100%;
+    background-color: skyblue;
+    padding-top: 0.5rem;
+  }
+  .HeaderLeft {
+    display: inline-block;
+    width: 60%;
+    box-sizing: border-box;
+  }
+  //検索バー横のツイッターアイコン
+  .HeaderIcon {
+    width: 1.5rem;
+  }
+  //検索バー虫眼鏡アイコン
+  .SearchIcon {
+    height: 1rem;
+    width: 1rem;
+    position: absolute;
+    left: 30px;
+    top: -15px;
+  }
+  //検索バー
+  .SearchBar {
+    width: 20rem;
+    height: 2.2rem;
+    border-radius: 20px;
+  }
+  /////////////////////////右半分/////////////////////////
+  .RightUl {
+    box-sizing: border-box;
+    display: flex;
+    height: 3.6rem;
+    width: 100%;
+    background-color: red;
+    padding-top: 1rem;
+  }
+  .HeaderRight {
+    display: inline-block;
+    width: 39%;
+    box-sizing: border-box;
+  }
+  //ハンバーガーアイコン
+  .Hamburg {
+    width: 1.5rem;
+    height: 1.5rem;
+  }
+}
+////////////////////////////////////////////////////////////////////////////////////////////
+//メインの中
+main {
+  section {
+    //ヘッダー画像
+    .HeadImg {
+      position: relative;
+      height: 12.5rem;
+      width: 100%;
+    }
+
+    //ビックアイコン
+    .Big {
+      height: 8rem;
+      width: 8rem;
+      margin-top: -4rem;
+      margin-left: 1rem;
+      z-index: 1;
+      position: relative;
+      float: left;
+    }
+    //フォローボタン
+    .Follow {
+      display: block;
+      float: right;
+      border: 2px solid;
+      padding: 8px 15px;
+      margin-top: 1rem;
+      margin-right: 3rem;
+    }
+    //プロフィール左の空間
+    .Prof {
+      float: clear;
+      margin-left: 15px;
+      margin-top: 5rem;
+    }
+    //プロフィール
+    .Comment {
+      padding-top: 8px;
+      padding-bottom: 8px;
     }
   }
 
-  main {
-    padding-top: 3.6rem;
-    background-color: green;
-    width: 600px;
-    margin: 0 10px 0 auto;
-
-    section {
-      .Height0 {
-        height: 0px;
-      }
-      .Prof {
-        margin-left: 15px;
-      }
-      .Comment {
-        padding-top: 8px;
-        padding-bottom: 8px;
-      }
-      span {
-        font-size: 15px;
-      }
-    }
-    nav {
-      p {
-        a {
-          width: 25%;
-          padding: 15px;
-        }
-      }
+  //////////////////////////////////////////////////////////////////////////////////////////////
+  //ナビの中
+  nav {
+    //ツイート メディア いいねの欄
+    .TweetNav {
+      // color: black;
+      font-size: 15px;
+      text-align: center;
+      font-weight: 700;
+      box-sizing: border-box;
+      display: inline-block;
+      border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+      width: 25%;
+      padding: 15px;
     }
   }
 
+  /////////////////////////////////////////////////////////////////////////////////////////////
+  //アーティクルの中（ツイート）
   article {
+    //アイコン
     .TweetIcon {
       margin-right: 10px;
     }
-    .TweetWidth {
+    //ツイート
+    .Tweet {
       margin: 30px 15px 0;
+      display: flex;
     }
+    //共有ボタンの横並べ
     .Flex {
       display: flex;
     }
-    .Columm {
-      flex-direction: column;
-    }
+    //ツイート下の共有ボタンたち
     .Share {
       width: 25%;
     }
   }
-
-  aside {
-    margin: 0 auto 0 10px;
-    padding-top: 3.3rem;
-    background-color: aqua;
-    width: 350px;
-
-    .Pad {
-      padding: 10px 15px;
-    }
-    .AsideImg {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: space-between;
-      align-items: center;
-      width: 350px;
-      height: 198px;
-      border-color: #fff;
-
-      img {
-        width: 114px;
-        height: 97px;
-      }
-    }
+}
+////////////////////////////////////////////////////////////////////////////////////////////
+//アサイドの中
+aside {
+  //asideの縁
+  .AsideEdge {
+    box-sizing: border-box;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    border-radius: 12px;
+    margin: 10px 0 15px;
   }
-  footer {
+  //パディング
+  .Pad {
+    padding: 10px 15px;
+  }
+  //Asideのアカウント作成
+  .BigOval {
+    text-align: center;
+  }
+
+  //asideの画像の親のサイズ(p)
+  .Width30 {
+    width: 33%;
+    box-sizing: border-box;
+  }
+
+  //asideの画像
+  .AsideImg {
     display: flex;
     flex-wrap: wrap;
-    color: rgb(101, 119, 134);
-    margin-top: 40px;
-    p {
-      display: inline-block;
-      box-sizing: border-box;
-      margin: 2px 0;
-    }
-    a {
-      padding-right: 10px;
-    }
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    border-color: #fff;
   }
 
-  //モーダルウィンドウ
+  //aside画像(中心上)
+  .AsideUpperCenter {
+    width: 100%;
+    height: 100%;
+    padding-bottom: 2px;
+  }
+  //aside画像(中心下)
+  .AsideLowerCenter {
+    width: 100%;
+    height: 100%;
+  }
+  //aside画像(左上)
+  .AsideUpperLeft {
+    border-top-left-radius: 8px;
+    width: 100%;
+    height: 100%;
+    padding-bottom: 2px;
+  }
+  //aside画像(右上)
+  .AsideUpperRight {
+    border-top-right-radius: 8px;
+    width: 100%;
+    height: 100%;
+    padding-bottom: 2px;
+  }
+  //aside画像(右下)
+  .AsideLowerRight {
+    border-bottom-right-radius: 8px;
+    width: 100%;
+    height: 100%;
+  }
+  //aside画像(左下)
+  .AsideLowerLeft {
+    border-bottom-left-radius: 8px;
+    width: 100%;
+    height: 100%;
+  }
+}
+////////////////////////////////////////////////////////////////////////////////////////////
+//フッターの中
+footer {
+  //Footerのテキスト
+  .FooterText {
+    box-sizing: border-box;
+    padding-right: 10px;
+    margin: 2px 0;
+    font-size: 13px;
+  }
+}
+
+////////////////////////////////////////////////////////////////////////////////////////////
+//モーダルウィンドウ
+.ModalAll {
   .Hidden {
     display: none;
   }
+  //モーダル本体
+  .Modal {
+    background: #fff;
+    width: 600px;
+    height: 500px;
+    border-radius: 4px;
+    position: fixed;
+    top: 100px;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    z-index: 1;
+  }
+  //閉じるボタン
+  .Close {
+    height: 22px;
+  }
+  //真ん中のアイコン
+  .ModalIcon {
+    height: 49px;
+    width: 49px;
+    padding: 0 0 0 50px;
+  }
+  //HTMLタグにつけるスクロールしなくなるやつ
+  .ScrollLock {
+    overflow: hidden;
+    touch-action: none;
+  }
 }
+////////////////////////////////////////////////////////////////////////////////////////////
